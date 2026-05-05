@@ -6,3 +6,4 @@ dist/
 !buildozer.spec
 Builds/*
 .buildozer/
+buildozer_live.log
