@@ -5,7 +5,7 @@ package.domain = com.tatask
 source.dir = .
 source.include_exts = py,png,ttf,otf,kv
 version = 1.0
-requirements = python3,kivy==2.3.0,kivymd==1.2.0,pillow
+requirements = python3==3.11.0,kivy==2.3.0,kivymd==1.2.0,pillow
 orientation = portrait
 fullscreen = 0
 
@@ -13,6 +13,8 @@ fullscreen = 0
 android.permissions = VIBRATE,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.api = 33
 android.minapi = 24
+android.accept_sdk_license = True
+android.archs = arm64-v8a
 
 [buildozer]
 log_level = 2
