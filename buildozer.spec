@@ -4,6 +4,8 @@ package.name = app
 package.domain = com.tatask
 source.dir = .
 source.include_exts = py,png,ttf,otf,kv
+source.exclude_dirs = .git,.buildozer,build,dist,bin,Builds,export,__pycache__
+source.exclude_patterns = *.spec,*.log,*.exe
 version = 1.0
 requirements = python3==3.11.0,kivy==2.3.0,kivymd==1.2.0,pillow
 orientation = portrait
