@@ -3,6 +3,7 @@ from kivy.metrics import dp
 from kivy.uix.button import Button
 from kivy.uix.image import Image
 from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.button import MDFlatButton
 from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.scrollview import MDScrollView
@@ -21,6 +22,9 @@ class HomeScreen(MDScreen):
         root = MDBoxLayout(orientation="vertical", padding=dp(16), spacing=dp(12))
         top = MDBoxLayout(orientation="horizontal", size_hint_y=None, height=dp(48))
         top.add_widget(MDLabel(text="TaTask", font_name="OriginalSurfer", theme_text_color="Custom", text_color=TEXT_PRIMARY, font_style="H5"))
+        about_btn = MDFlatButton(text="About", font_name="Museo")
+        about_btn.bind(on_release=lambda *_: self.app.show_about())
+        top.add_widget(about_btn)
         self.counter = MDLabel(text="0 active", font_name="Museo", theme_text_color="Custom", text_color=TEXT_SECONDARY, size_hint_x=None, width=dp(88))
         top.add_widget(self.counter)
         archive_btn = Button(

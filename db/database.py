@@ -60,7 +60,7 @@ class DatabaseManager:
                 INSERT INTO tasks (title, description, priority, deadline, created_at, completed_at, is_archived)
                 VALUES (?, ?, ?, ?, ?, NULL, 0)
                 """,
-                (title.strip(), description.strip() if description else None, priority, deadline),
+                (title.strip(), description.strip() if description else None, priority, deadline, now),
             )
             conn.commit()
             return cur.lastrowid
